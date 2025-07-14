@@ -22,7 +22,7 @@ Ensure you have the following installed:
      - On Windows: `venv\Scripts\activate`
 
 3. Install the CLI tool:
-   - Run: `pip install .`
+   - Run: `pip install urlzap`
 
 4. Run the CLI:
    - Type `shr` in the terminal to start using the tool.
