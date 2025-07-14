@@ -69,21 +69,20 @@ def show_info():
     """Display information about the URL Shortener CLI tool."""
     print("""
 URL Shortener CLI Tool
----------------------
 A simple command-line tool to shorten URLs.
-Version : 1.0.0
+Version : 2.0.0
 License: MIT
 Features:
 - Shorten URLs with detailed output (`shorten` command)
 - Validate URLs without shortening (`validate` command)
 - View history of shortened URLs (`history` command)
 - Batch shorten URLs from a file (`batch` command)
-Use `shr --help` for more details.
+Use `zap --help` for more details.
     """)
 
 def show_version():
     """Display the version of the URL Shortener CLI tool."""
-    print("URL Shortener CLI Tool, version 1.0.0")
+    print("URL Shortener CLI Tool, version 2.0.0")
 
 def show_history():
     """Display the history of shortened URLs."""
@@ -158,12 +157,12 @@ class CustomHelpFormatter(argparse.HelpFormatter):
         if '--help' in sys.argv or '-h' in sys.argv:
             help_text += """
 Use Cases:
-  shr shorten https://www.google.com    # Shorten a URL
-  shr validate https://x.com           # Validate a URL
-  shr history                          # View shortening history
-  shr batch urls.txt                   # Shorten URLs from a file
-  shr info                             # Show tool information
-  shr version                          # Show tool version
+  zap shorten https://www.google.com    # Shorten a URL
+  zap validate https://x.com           # Validate a URL
+  zap history                          # View shortening history
+  zap batch urls.txt                   # Shorten URLs from a file
+  zap info                             # Show tool information
+  zap version                          # Show tool version
 """
         return help_text
 
@@ -176,24 +175,24 @@ def main():
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
     # Shorten command
-    parser_shorten = subparsers.add_parser("shorten", help="Shorten a URL", description="Shorten a valid URL using TinyURL API. Example: shr shorten https://www.google.com")
+    parser_shorten = subparsers.add_parser("shorten", help="Shorten a URL", description="Shorten a valid URL using TinyURL API. Example: zap shorten https://www.google.com")
     parser_shorten.add_argument("url", help="The URL to shorten (e.g., https://www.google.com)")
 
     # Info command
-    subparsers.add_parser("info", help="Display information about the tool", description="Show details about the tool, including author and features. Example: shr info")
+    subparsers.add_parser("info", help="Display information about the tool", description="Show details about the tool, including author and features. Example: zap info")
 
     # Version command
-    subparsers.add_parser("version", help="Display the tool version", description="Show the current version of the tool. Example: shr version")
+    subparsers.add_parser("version", help="Display the tool version", description="Show the current version of the tool. Example: zap version")
 
     # History command
-    subparsers.add_parser("history", help="Display history of shortened URLs", description="Show previously shortened URLs with details. Example: shr history")
+    subparsers.add_parser("history", help="Display history of shortened URLs", description="Show previously shortened URLs with details. Example: zap history")
 
     # Validate command
-    parser_validate = subparsers.add_parser("validate", help="Validate a URL without shortening", description="Check if a URL is valid. Example: shr validate https://x.com")
+    parser_validate = subparsers.add_parser("validate", help="Validate a URL without shortening", description="Check if a URL is valid. Example: zap validate https://x.com")
     parser_validate.add_argument("url", help="The URL to validate (e.g., https://x.com)")
 
     # Batch command
-    parser_batch = subparsers.add_parser("batch", help="Shorten multiple URLs from a file", description="Shorten URLs listed in a text file (one per line). Example: shr batch urls.txt")
+    parser_batch = subparsers.add_parser("batch", help="Shorten multiple URLs from a file", description="Shorten URLs listed in a text file (one per line). Example: zap batch urls.txt")
     parser_batch.add_argument("file", help="Path to a text file containing URLs (one per line)")
 
     args = parser.parse_args()

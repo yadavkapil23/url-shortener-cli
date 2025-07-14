@@ -25,7 +25,7 @@ Ensure you have the following installed:
    - Run: `pip install urlzap`
 
 4. Run the CLI:
-   - Type `shr` in the terminal to start using the tool.
+   - Type `zap` in the terminal to start using the tool.
 
    Now, your CLI tool is ready to use! 🎉
 
@@ -47,14 +47,14 @@ Ensure you have the following installed:
 ### Basic Commands
 | Command       | Description                              |
 |---------------|------------------------------------------|
-| `shr shorten <url>` | Shorten a URL with detailed output |
-| `shr validate <url>` | Validate a URL                   |
-| `shr history`      | Display history of shortened URLs       |
-| `shr batch <file>` | Shorten URLs from a text file           |
-| `shr info`         | Display tool information                |
-| `shr version`      | Show tool version                       |
+| `zap shorten <url>` | Shorten a URL with detailed output |
+| `zap validate <url>` | Validate a URL                   |
+| `zap history`      | Display history of shortened URLs       |
+| `zap batch <file>` | Shorten URLs from a text file           |
+| `zap info`         | Display tool information                |
+| `zap version`      | Show tool version                       |
 
-Run `shr --help` for detailed examples and options.
+Run `zap --help` for detailed examples and options.
 
 ## 🧠 How It Works
 
@@ -64,7 +64,7 @@ The API returns the shortened URL in plain text. History is stored in `url_histo
 
 ## 🚀 Deployment
 
-No additional deployment is required; the tool runs locally via the `shr` command.
+No additional deployment is required; the tool runs locally via the `zap` command.
 
 ## 🧠 Future Enhancements
 

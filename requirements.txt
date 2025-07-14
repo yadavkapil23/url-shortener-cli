@@ -1,6 +1,3 @@
 requests
 setuptools
-argparse
-sys
-json
-os
+argparse  
