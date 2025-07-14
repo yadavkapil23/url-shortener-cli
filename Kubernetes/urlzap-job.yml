@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: urlzap-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: urlzap
+        image: yadavkapil23/urlzap-cli:latest
+        args: ["shorten", "https://microsoft.com"]
+      restartPolicy: Never
